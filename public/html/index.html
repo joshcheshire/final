@@ -3,19 +3,11 @@
 	
 	<head>
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-		
 		<title>Tonight-In:</title>
-
 		<link href='https://fonts.googleapis.com/css?family=Jura:400,500' rel='stylesheet' type='text/css'>
-		
 		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.css">
-		
-
-		
 		<script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
-		
 		<link rel = "stylesheet" href = "/stylesheets/main.css"> 
-
 		<link rel ="stylesheet" href = "/stylesheets/animate.css">
 		</head>
 
@@ -29,62 +21,16 @@
 	
 	<div ng-controller = "mainController">
 
-        <h1>{{greeting}}</h1>
-		
+        
 		<h1 class = "animated rubberBand" id = "header" ><strong>Tonight - In.</strong></h1>
 
 		
 		<h3  class ="animated fadeInRight" id = "noFuss"> No Sign Up. No Fuss.<br> Discover Bands Playing in Your City Tonight.</h3>
-
+		<h1>{{greeting}}</h1>
+		
 <!-- 		<a class = 'test' href = "http://api.bandsintown.com/events/search.json?location=Denver,CO&date=2015-11-25,2015-11-25&app_id=tonightInApp"> Denver</a>
  !-->
 		
-
-
-			<!-- <div class = "animated flipInX" id ="dropdownDiv">
-					<p class = "citySelect"> Select A City</p>
-						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
-							<option value = "Albuquerque">Albuquerque, NM</option>
-							<option value = "Birmingham">Birmingham, AL</option>	
-							<option value = "Chicago">Chicago, IL</option>
-							<option value = "Denver">Denver, CO</option>
-							<option value = "Norway">Trondheim, NRW</option>							
-						
-						</select>
-					</div>
-					<div class=  "dataContainer"  ng-repeat="data in bandList | filter : search.city">
-
-
-				
-						<h1 class= "headliner"  ng-click="playAudio(data)"><em><strong> {{data.headliner}} </strong> </em>
-
-							</h1>
-						
-
-
-						<audio controls ng-show = "data.showAudio"  class = "audio"> 
-					
-					<source src ="{{data.headlinerSound}}"> </audio>
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-					
-
-					<!-- <div ng-repeat = "band in data.supporters">
-						<h3 class = "support" ><em ng-click = "playSupporterAudio(data)">{{band.name}}</em></h3>
-
-								<audio controls ng-show = "data.showSupAudio" class = "supAudio">
-									<source src ="{{band.supporterSound}}">
-						</audio>
-
-				</div>
-			
-			<h3 class = "venue">{{data.venue}}</h3> 
-			
-			<h3 class= "city">{{data.city}}</h3>
-			
-			<h3 class = "date">{{data.date}}</h3> 
-		
-		<a ng-href="{{data.tickets}}" id = "btn" class="btn btn-danger">Buy Tickets</a><hr>
-		</div> --> 
 
 	</div>
 		

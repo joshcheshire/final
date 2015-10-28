@@ -1,6 +1,9 @@
 // Requires \\
 var express = require('express');
 var bodyParser = require('body-parser');
+var mainCtrl = require('./public/controllers/mainctrl.js')
+var mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/final')
 
 // Create Express App Object \\
 var app = express();
@@ -18,6 +21,11 @@ app.get('/', function(req, res){
 app.get('/submit', function(req, res){
   res.sendFile('/submit.html', {root: './public/html'});
 });
+
+
+app.get('/submitArtist', mainCtrl.getArtist)
+
+app.post('/submit', mainCtrl.createArtist)
 
 app.get('/playing', function(req, res){
   res.sendFile('/playing.html', {root: './public/html'});

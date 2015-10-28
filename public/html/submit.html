@@ -11,17 +11,42 @@
 		<link rel ="stylesheet" href = "/stylesheets/animate.css">
 		</head>
 
-	<body>
+	<body ng-controller="submitController">
 
-		<div ng-controller="submitController">
+	<audio autoplay>
+  <source ng-model="testicles" src="./music/cheer.mp3" type="audio/mpeg">
+		</audio>
 
-			<form class = "submitJam" action="post">
-  				<input type="file" name="jams" accept="audio/*">
-  				<input type="submit">
-			</form>
-		</div>
+	<h3>{{greeting}}</h3>
+
+		<div>
+
+				<form  ng-submit="createArtist()">
+				<input ng-model="newArtist.name" placeholder="Artist Name">
+				<input ng-model="newArtist.bio"   placeholder="Bio">
+				<input ng-model="newArtist.songName" placeholder="Song Name">
+				<input fileread="newArtist.song" type="file" >
 	
-		<script src = "/javascripts/submit.js"></script>
+				<input type="submit">
+
+		</div>
+
+				<ul ng-show = 'artists'>
+					<li>
+		
+		<div ng-repeat="data in artists track by $index">
+ 					<h1>{{data.name}}</h1>
+					
+					<h3>{{data.bio}}</h3>
+					<h5>{{data.songName}}</h5>
+		</div>
+
+	</li>
+</ul>				
+	
+		
+	 	<script src = "/javascripts/main.js"></script>
+		
 	</body>
 
 
