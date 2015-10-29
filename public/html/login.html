@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Jura:400,500' rel='stylesheet' type='text/css'>
+  <link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.css">
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+  <link rel = "stylesheet" href = "/stylesheets/main.css"> 
+  <link rel ="stylesheet" href = "/stylesheets/animate.css">
+</head>
+<body>
+	
+  <!-- <img class ="animate zoomIn" id ="background" src = "http://wallpaperlepi.com/wp-content/uploads/2014/10/Silhouette-Rock-Concert-Wallpaper1.jpg">
+ -->
+
+ <div>
+  <h1>Existing Users</h1>
+  <form action="/auth/login" method="post">
+    <input type="text" name="username" placeholder="Username"/>
+    <input type="password" name="password" placeholder="Password"/>
+    <input type="submit"/>
+  </form>
+  <h1>Register</h1>
+  <form action="/auth/signup" method="post">
+    <input type="text" name="username" placeholder="Username"/>
+    <input type="email" name="email" placeholder="Email"/>
+    <input type="password" name="password" placeholder="Password"/>
+    <input type="submit"/>
+  </form>
+</div>
+
+</body>
+</html>

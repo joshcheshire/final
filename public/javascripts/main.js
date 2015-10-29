@@ -1,13 +1,14 @@
 var master = angular.module('master', [])
 
 
-master.directive("fileread", [function () {
+angular.module('master').directive("fileread", [function () {
     return {
         scope: {
             fileread: "="
         },
         link: function (scope, element, attributes) {
             element.bind("change", function (changeEvent) {
+            	// console.log('LOG', changeEvent.target.files[0])
                 var reader = new FileReader();
                 reader.onload = function (loadEvent) {
                     scope.$apply(function () {
@@ -19,6 +20,37 @@ master.directive("fileread", [function () {
         }
     }
 }]);
+
+angular.module('master')
+	.service('authService', ['$http', '$location', function($http){
+		
+		this.authCheck = function(cb){
+			$http.get('/api/me')
+				.then( function(returnData){
+					cb(returnData.data)
+
+				})
+		}
+					
+						
+	}])
+
+angular.module('master')
+	.controller('authController', ['$scope', '$http', '$rootScope','authService', function($scope, $http, $rootScope, authService){
+		console.log('AUTH', authService)
+		
+		authService.authCheck(function(user){
+			console.log('USER!', user)
+			$scope.user = user
+			$rootScope.user = $scope.user
+		})
+
+	}])
+
+
+
+
+
 
 
 
@@ -50,6 +82,8 @@ console.log('working')
 	}
 
 
+
+
 $scope.bandList = bandList
 	
 
@@ -64,9 +98,10 @@ angular.module('master').controller('mainController', ['$scope', mainControllerF
 // -=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=- \\
 
 
-	 var submitControllerFunc=function($scope, $http){
+	 var submitControllerFunc=function($scope, $http, $sce){
 
-		$scope.greeting = 'submit it';
+		$scope.greeting = 'Connect with potential fans by completing the forms below.';
+		$scope.$sce = $sce;
 
 		$http.get('/submitArtist')
 			.then(function(returnData){
@@ -101,7 +136,7 @@ angular.module('master').controller('mainController', ['$scope', mainControllerF
 
 
 
-angular.module('master').controller('submitController',['$scope', '$http', submitControllerFunc])
+angular.module('master').controller('submitController',['$scope', '$http','$sce', submitControllerFunc])
 
 
 

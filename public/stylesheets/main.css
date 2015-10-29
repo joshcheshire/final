@@ -146,7 +146,18 @@ font-weight: bolder;
 
 */
 
+.addArtist{
+  text-align: center;
+  border: 3px solid black;
+  width:15vw;
+}
 
+.addShow{
+text-align: center;
+  border: 3px solid black;
+  width:15vw;
+  
+}
 
 
 
