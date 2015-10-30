@@ -103,7 +103,7 @@ angular.module('master').controller('mainController', ['$scope', mainControllerF
 
 	 var submitControllerFunc=function($scope, $http, $sce){
 
-		$scope.greeting = 'Connect with potential fans by completing the forms below.';
+		$scope.greeting = 'Gimme your Info!';
 		$scope.$sce = $sce;
 
 		$http.get('/submitArtist')
@@ -149,7 +149,7 @@ var showControllerFunc =function($scope, $http){
 	$scope.header = "Create a Show"
 	// $scope.findBands = function(){
 	// 	console.log($scope.search)
-	
+
 
 	$http.get('/submitShow')
 		.then(function(returnData){
