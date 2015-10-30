@@ -20,7 +20,7 @@
 					<p class = "citySelect"> Select A City</p>
 						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
 							
-							<option ng-repeat="data in shows">{{data.city}}</option>
+							<option value = "{{data.city}}" ng-repeat="data in shows">{{data.city}}</option>
 						</select>
 					</div>
 				</div>
@@ -29,9 +29,9 @@
 
 
 			<div>
-				<ul ng-hide= 'shows'>	
+				<ul ng-show= 'search.city'>	
 		
-			<div ng-repeat="data in shows track by $index">
+			<div ng-repeat="data in shows | filter:search.city">
  			
 
 					<!-- <h1>{{data.date}}</h1> -->

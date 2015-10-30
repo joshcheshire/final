@@ -119,6 +119,7 @@ angular.module('master').controller('mainController', ['$scope', mainControllerF
 
 			$http.post('/submit', $scope.newArtist)
 				.then(function(returnData){
+					$scope.newArtist={}
 					$http.get('/submitArtist')
 					.then(function(returnData){
 					$scope.artists = returnData.data
@@ -146,9 +147,11 @@ angular.module('master').controller('submitController',['$scope', '$http','$sce'
 
 var showControllerFunc =function($scope, $http){
 
+	$scope.shows =[]
 	$scope.header = "Create a Show"
-	// $scope.findBands = function(){
-	// 	console.log($scope.search)
+	$scope.findBands = function(){
+		console.log($scope.search)
+	}
 
 
 	$http.get('/submitShow')
@@ -161,6 +164,7 @@ var showControllerFunc =function($scope, $http){
 
 			$http.post('/showInfo', $scope.newShow)
 				.then(function(returnData){
+					$scope.newShow={}
 					$http.get('/submitShow')
 					.then(function(returnData){
 						$scope.shows = returnData.data;
