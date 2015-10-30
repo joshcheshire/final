@@ -13,6 +13,14 @@
 .login{
   text-align: center;
 }
+.uploadAudio{
+
+  padding-bottom:10px;
+}
+.choose{
+ margin-left: 48vw;
+ padding-bottom: 25px;
+}
 
 #header{
   font-family: 'Jura', sans-serif;
