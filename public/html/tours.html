@@ -11,12 +11,14 @@
 		</head>
 
 		<body ng-controller = "showController">
-			<div >
+
+	
+			<div>
 
 				<h1 class ="tourHeader">Tonight In:</h1>
 				<div class = "animated flipInX" id ="dropdownDiv">
 					<p class = "citySelect"> Select A City</p>
-						<select class = "selector"  ng-model="search.city" > 
+						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
 							
 							<option ng-repeat="data in shows">{{data.city}}</option>
 						</select>
@@ -29,7 +31,7 @@
 			<div>
 				<ul ng-hide= 'shows'>	
 		
-			<div ng-repeat="data in shows track by $index | filter:'search.city' ">
+			<div ng-repeat="data in shows track by $index">
  			
 
 					<!-- <h1>{{data.date}}</h1> -->

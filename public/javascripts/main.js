@@ -147,6 +147,9 @@ angular.module('master').controller('submitController',['$scope', '$http','$sce'
 var showControllerFunc =function($scope, $http){
 
 	$scope.header = "Create a Show"
+	// $scope.findBands = function(){
+	// 	console.log($scope.search)
+	
 
 	$http.get('/submitShow')
 		.then(function(returnData){
