@@ -98,6 +98,9 @@ angular.module('master').controller('mainController', ['$scope', mainControllerF
 // -=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=- \\
 
 
+
+
+
 	 var submitControllerFunc=function($scope, $http, $sce){
 
 		$scope.greeting = 'Connect with potential fans by completing the forms below.';
@@ -106,11 +109,10 @@ angular.module('master').controller('mainController', ['$scope', mainControllerF
 		$http.get('/submitArtist')
 			.then(function(returnData){
 				$scope.artists = returnData.data
-						console.log(returnData);
+						console.log($scope.artists);
 
 
 			})
-			console.log($scope.testicles)
 
 
 		$scope.createArtist = function(){
@@ -142,8 +144,32 @@ angular.module('master').controller('submitController',['$scope', '$http','$sce'
 
 
 
+var showControllerFunc =function($scope, $http){
+
+	$scope.header = "Create a Show"
+
+	$http.get('/submitShow')
+		.then(function(returnData){
+			$scope.shows=returnData.data
+				console.log(returnData)
+		})
+
+		$scope.createShow = function(){
+
+			$http.post('/showInfo', $scope.newShow)
+				.then(function(returnData){
+					$http.get('/submitShow')
+					.then(function(returnData){
+						$scope.shows = returnData.data;
+					})
+					console.log('Show Made', returnData)	
+
+				})
+		}
+}
 
 
+angular.module('master').controller('showController',['$scope', '$http', showControllerFunc])
 
 
 

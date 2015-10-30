@@ -12,6 +12,6 @@ var artistSchema = mongoose.Schema({
 
 });
 
-var showSchema = mongoose.Schema
+
 
 module.exports = mongoose.model('Artist', artistSchema);

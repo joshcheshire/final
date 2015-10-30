@@ -9,19 +9,26 @@
   <link rel = "stylesheet" href = "/stylesheets/main.css"> 
   <link rel ="stylesheet" href = "/stylesheets/animate.css">
 </head>
-<body>
+<body class ="login">
 	
-  <!-- <img class ="animate zoomIn" id ="background" src = "http://wallpaperlepi.com/wp-content/uploads/2014/10/Silhouette-Rock-Concert-Wallpaper1.jpg">
+<!--   <img class ="animate zoomIn" id ="background" src = "http://wallpaperlepi.com/wp-content/uploads/2014/10/Silhouette-Rock-Concert-Wallpaper1.jpg">
  -->
 
+
+ <div class='welcome'>
+    <h1> Tour Manager 1.0</h1>
+
+
+
+
  <div>
-  <h1>Existing Users</h1>
+  <h3>Artist Login</h3>
   <form action="/auth/login" method="post">
     <input type="text" name="username" placeholder="Username"/>
     <input type="password" name="password" placeholder="Password"/>
     <input type="submit"/>
   </form>
-  <h1>Register</h1>
+  <h1>First time user? Register now!</h1>
   <form action="/auth/signup" method="post">
     <input type="text" name="username" placeholder="Username"/>
     <input type="email" name="email" placeholder="Email"/>
@@ -29,6 +36,11 @@
     <input type="submit"/>
   </form>
 </div>
+<div>
+    <h2> ..Or Skip this and find Concerts in your city</h2>
+      <a href="/tours" class="btn btn-success btn-lg">Playing Tonight in Your City</a>
+  </div>
+
 
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 	<html ng-app="master">
 	
@@ -12,40 +11,35 @@
 		</head>
 
 		<body ng-controller = "showController">
+			<div >
+
+				<h1 class ="tourHeader">Tonight In:</h1>
+				<div class = "animated flipInX" id ="dropdownDiv">
+					<p class = "citySelect"> Select A City</p>
+						<select class = "selector"  ng-model="search.city" > 
+							
+							<option ng-repeat="data in shows">{{data.city}}</option>
+						</select>
+					</div>
+				</div>
+					<!-- <div class=  "dataContainer"  ng-repeat="data in bandList "> -->
+
+
 
 			<div>
-
-			<h1>{{header}}</h1> <br> 
-				<form ng-submit="createShow()">
-					<input ng-model="newShow.date"  placeholder="Date">
-					<input ng-model="newShow.venue" placeholder="Venue"> 
-					<input ng-model="newShow.city"  placeholder="City">
-					<input ng-model="newShow.state"  placeholder="State">
-					<input type="submit">
-				</form>
-
-		</div>
+				<ul ng-hide= 'shows'>	
 		
-		<div id = "tourRedirect">
-
-		<a  href="/tours" class="btn btn-success btn-lg">Playing Tonight in Your City</a>
-
-		</div>
-		
-
-	<!-- 	<ul ng-show = 'shows'>	
-		
-			<div ng-repeat="data in shows track by $index">
+			<div ng-repeat="data in shows track by $index | filter:'search.city' ">
  			
 
-					<h1>{{data.date}}</h1>
+					<!-- <h1>{{data.date}}</h1> -->
 					<h2>{{data.venue}}</h2>
 					<h3>{{data.city}}</h3>
-					<h3>{{data.state}}</h3>
+					<h3>{{data.state}}</h3><hr>
 
 			</div>
 
-		</ul> -->
+		</ul>
 		
 		</body>
 

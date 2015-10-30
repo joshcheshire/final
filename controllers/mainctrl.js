@@ -1,5 +1,6 @@
-var Artist = require('../models/submit')
-var fs = require('fs')
+var Artist = require('../models/artists')
+var Show = require('../models/shows')
+// var fs = require('fs')
 
 
 var apiController = {
@@ -20,11 +21,6 @@ var apiController = {
 				song       :   req.body.song, 
 				bio        :   req.body.bio,
 
-
-
-
-
-
 			})
 
 			newArtist.save(function(err, doc){
@@ -37,6 +33,37 @@ var apiController = {
 			res.send(docs)
 		})
 	}
-}
+};
 
-module.exports = apiController;
+
+
+var showController ={
+	createShow :function(req,res){
+
+		var newShow = new Show({
+
+			date :  req.body.date,
+			venue:  req.body.venue,
+			city:   req.body.city,
+			state:  req.body.state,
+
+		})
+
+		newShow.save(function(err, doc){
+			res.send(doc)
+		})
+	},
+
+	getShow:function(req, res){
+
+		Show.find({}, function(err, docs){
+			res.send(docs)
+		})
+	}
+};
+
+module.exports = {
+
+				apiController : apiController,
+				showController: showController,
+			}

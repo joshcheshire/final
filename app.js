@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var mainCtrl = require('./controllers/mainctrl.js')
 var mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/final')
-// mongoose.connect('mongodb://localhost/passport-demo')
 
 // Auth Requires
 var session = require('express-session');
@@ -70,8 +69,6 @@ app.get('/', function(req, res){
 });
 
 
-
-
 app.use(passportConfig.ensureAuthenticated);
 
 app.get('/index', function(req,res){
@@ -88,13 +85,22 @@ app.get('/showinfo', function(req, res){
   res.sendFile('/showInfo.html', {root: './public/html'});
 });
 
+//=-=-=-=-=-=-=-=-=-=-=problems-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=//
 
-app.get('/submitArtist', mainCtrl.getArtist)
+app.get('/submitShow', mainCtrl.showController.getShow)
 
-app.post('/submit', mainCtrl.createArtist)
+app.post('/showInfo', mainCtrl.showController.createShow)
 
-app.get('/playing', function(req, res){
-  res.sendFile('/playing.html', {root: './public/html'});
+app.get('/submitArtist', mainCtrl.apiController.getArtist)
+
+app.post('/submit', mainCtrl.apiController.createArtist)
+
+
+
+ //-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+
+app.get('/tours', function(req, res){
+  res.sendFile('/tours.html', {root: './public/html'});
 });
 
 app.get('/about', function(req, res){

@@ -11,16 +11,16 @@
 		<link rel ="stylesheet" href = "/stylesheets/animate.css">
 		</head>
 
-	<body ng-controller="submitController">
+	<body >
 
 	<!-- <audio controls>
   <source src="/music/hgc.mp3" type="audio/mpeg">
 		</audio> -->
 
-	<h3>{{greeting}}</h3>
+	
 
-		<div class = "addArtist">
-
+		<div ng-controller="submitController" class = "addArtist">
+			<h3>{{greeting}}</h3>
 				<form  ng-submit="createArtist()">
 					<input ng-model="newArtist.name" placeholder="Artist Name">
 					<input ng-model="newArtist.bio"   placeholder="Bio">
@@ -32,9 +32,23 @@
 					<input type="submit">
 
 				</form>
+
+						<ul ng-show = 'artists'>
+			<div ng-repeat="data in artists track by $index">
+ 					<h1>{{data.name}}</h1>
+					<h3>{{data.bio}}</h3>
+					<h5>{{data.songName}}</h5>
+					<audio controls>
+  					<source src="{{$sce.trustAsResourceUrl(data.song)}}" type="audio/mpeg">
+					</audio>
 		</div>
 
-			<div class = "addShow">
+	</li>
+</ul>				
+	
+		</div>
+
+		<!-- 	<div ng-controller = "showController" class = "addShow">
 
 			<h1> Add a new concert</h1> <br> 
 				<form ng-submit="createShow()">
@@ -46,27 +60,15 @@
 				</form>
 
 		</div>
-		
+		 -->
 
-				<ul ng-show = 'artists'>
-					
-		
-		<div ng-repeat="data in artists track by $index">
- 					<h1>{{data.name}}</h1>
-					<h3>{{data.bio}}</h3>
-					<h5>{{data.songName}}</h5>
-					<audio controls>
-  						<source src="{{$sce.trustAsResourceUrl(data.song)}}" type="audio/mpeg">
-					</audio>
-		</div
 
-	</li>
-</ul>				
-	
 		
 	 	<script src = "/javascripts/main.js"></script>
 		
 	</body>
+
+</html>
 
 
 		
