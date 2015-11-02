@@ -11,22 +11,37 @@
 </head>
 
 
-<body> 
-
+<body class = "index"> 
+	<!-- <nav class = "navbar navbar-top ">
+					<button type = "button" class = " project-name btn btn-link btn-lg"> Project Name</button>
+						<a class=" project-name navbar-brand" href="#">Project name</a>
+						<form class = "form-inline">
+							<div class = " form-group">
+								<input type = "text" class = "email" placeholder = "Email
+								"></input>
+								</div>
+							<div class = " form-group">
+								<input type = "text" class = "password" placeholder = "Password
+								"></input>
+								<button type = "button" class = "sign-in btn btn-success">Sign In</button>
+								</div>
+							</form>
+						</nav>
+ -->
 	<div ng-controller="authController">
 	
-		<h1>Welcome Back {{user.username}}!</h1>
+		<h1>Hello {{user.username}}!</h1>
 		<!-- <img class ="animate zoomIn" id ="background" src = "http://wallpaperlepi.com/wp-content/uploads/2014/10/Silhouette-Rock-	Concert-Wallpaper1.jpg"> -->
 		<div ng-controller = "mainController">
-		<h1 class = "animated rubberBand" id = "header" ><strong>No Title Yet</strong></h1>
+		<h1 class = "animated rubberBand" id = "header" ><strong>Get Promoted</strong></h1>
 
 	</div>
 
 	<div class = "buttons">
-		<a href="/submit" class="btn btn-info btn-lg">Update Info</a>
+	
 		<a href="/showInfo" class="btn btn-success btn-lg">Add Show</a>
 		<a href="/tours" class="btn btn-danger btn-lg">Playing Tonight in Your City</a>
-		<a href="/about" class="btn btn-primary btn-lg">About</a>
+		<a href="/about" class="btn btn-info btn-lg">About</a>
 	</div>
 
 

@@ -10,11 +10,10 @@
 		<link rel ="stylesheet" href = "/stylesheets/animate.css">
 		</head>
 
-		<body ng-controller = "showController">
-
-	
+		<body class ="tours" ng-controller = "showController">
+			
 			<div>
-
+			
 				<h1 class ="tourHeader">Tonight In:</h1>
 				<div class = "animated flipInX" id ="dropdownDiv">
 					<p class = "citySelect"> Select A City</p>
@@ -34,7 +33,10 @@
 			<div ng-repeat="data in shows | filter:search.city">
  			
 
-					<!-- <h1>{{data.date}}</h1> -->
+					<h1 ng-click="playAudio(data)">{{data.artist}}</h1>
+					<audio class = "audio" controls ng-show = "data.showAudio" >
+  					<source src="{{$sce.trustAsResourceUrl(data.song)}}" type="audio/mpeg">
+					</audio>
 					<h2>{{data.venue}}</h2>
 					<h3>{{data.city}}</h3>
 					<h3>{{data.state}}</h3><hr>
@@ -42,7 +44,8 @@
 			</div>
 
 		</ul>
-		
+<!-- 			<img id = "background" src="https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?ixlib=rb-0.3.5&q=80&fm=jpg&s=3dcbec753a793b4ff35633bc776ddffe">
+ -->
 		</body>
 
 		<script src = "/javascripts/main.js"></script>

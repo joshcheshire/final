@@ -1,7 +1,8 @@
 var mongoose = require('mongoose')
 
 var showSchema = mongoose.Schema({
-	date		: {type :String},
+	artist		: {type :String},
+	song		: {type :String},
 	venue		: {type :String},
 	city		: {type :String},
 	state		: {type :String},

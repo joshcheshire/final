@@ -6,18 +6,51 @@
   width:100vw;
   
 }
+
+.navbar{
+  background-color: black;
+  margin: 0 auto;
+}
 .buttons{
   text-align: center;
 }
 
 .login{
+  background-image: url("http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52580ca759efe_1.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
+  font-family: 'Jura', sans-serif;
 }
-.uploadAudio{
 
+.tours{
+  background-image: url("https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?ixlib=rb-0.3.5&q=80&fm=jpg&s=3dcbec753a793b4ff35633bc776ddffe");
+  background-size: cover;
+  font-family: 'Jura', sans-serif;
+}
+
+.index{
+  background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_5252bb51404f8_1.JPG');
+  background-size: cover;
+  font-family: 'Jura', sans-serif;
+}
+
+.showInfo{
+font-family: 'Jura', sans-serif;
+background-image: url('http://buztour.com/wp-content/uploads/2013/12/concert-wallpaper-1920x1200.jpg');
+background-size: cover;
+
+}
+
+
+.uploadAudio{
+  font: black;
   padding-bottom:10px;
 }
 .choose{
+ font-family: 'Jura', sans-serif;
+/* border:3px solid black;
+*/ font: black;
  margin-left: 48vw;
  padding-bottom: 25px;
 }
@@ -35,6 +68,7 @@ text-align: center;
 #tourRedirect{
  
   text-align: center;
+  padding-top:3vw;
 
 }
 .tourHeader{
@@ -48,6 +82,7 @@ text-align: center;
 }
 
 #dropdownDiv{
+ /* text-align: center;*/
   padding-top: 2vw;
   }
 
@@ -56,14 +91,12 @@ text-align: center;
   font-weight: bold;
   margin-left: 40vw;
 }
-.submitJam{
-  text-align: center;
 
-}
+
 .selector{
-
-  width: 12vw;
-  margin-left: 43.5vw;
+/*  text-align: center;
+*/  width: 12vw;
+  margin-left: 44vw;
   background-color:black;
   
 }

@@ -18,7 +18,7 @@ var apiController = {
 
 				name       :   req.body.name,
 				songName   :   req.body.songName,
-				song       :   req.body.song, 
+			 
 				bio        :   req.body.bio,
 
 			})
@@ -41,8 +41,8 @@ var showController ={
 	createShow :function(req,res){
 
 		var newShow = new Show({
-
-			date :  req.body.date,
+			song :  req.body.song,
+			artist: req.body.artist,
 			venue:  req.body.venue,
 			city:   req.body.city,
 			state:  req.body.state,

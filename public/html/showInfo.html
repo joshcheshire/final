@@ -3,7 +3,7 @@
 	<html ng-app="master">
 	
 	<head>
-		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"><title>Show Submit</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"><title>Create a Show</title>
 		<link href='https://fonts.googleapis.com/css?family=Jura:400,500' rel='stylesheet' type='text/css'>
 		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.css">
 		<script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
@@ -11,13 +11,18 @@
 		<link rel ="stylesheet" href = "/stylesheets/animate.css">
 		</head>
 
-		<body ng-controller = "showController">
+		<body class='showInfo' ng-controller = "showController">
 
-			<div>
+			<div class = "addArtist">
 
 			<h1>{{header}}</h1> <br> 
 				<form ng-submit="createShow()">
-					<input ng-model="newShow.date"  placeholder="Date">
+					
+					<div class ="uploadAudio">
+						<p> Upload Audio Clip</p>
+						<input class ="choose" fileread="newShow.song" type="file" accept="audio/*">
+					</div>
+					<input ng-model="newShow.artist"  placeholder="Artist">
 					<input ng-model="newShow.venue" placeholder="Venue"> 
 					<input ng-model="newShow.city"  placeholder="City">
 					<input ng-model="newShow.state"  placeholder="State">
@@ -28,7 +33,7 @@
 		
 		<div id = "tourRedirect">
 
-		<a  href="/tours" class="btn btn-success btn-lg">Tours</a>
+		<a  href="/tours" class="btn btn-success btn-lg">View Shows</a>
 
 		</div>
 		
