@@ -148,12 +148,22 @@ angular.module('master').controller('submitController',['$scope', '$http','$sce'
 var showControllerFunc =function($scope, $http, $sce){
 	$scope.$sce = $sce;
 
+		$scope.shows =[]
+	// 	newArray = []
+	// $scope.shows.forEach(function(element){
+	// 	if (newArray.indexOf(element) === -1){
+	// 		newArray.push(element)
+	// 	}
+	// });
+	// console.log(newArray)
+	// return newArray;
+
+
 
 	$scope.playAudio = function(data){
 		data.showAudio = !data.showAudio;
 	}
 
-	$scope.shows =[]
 	$scope.header = "Create a Show"
 	$scope.findBands = function(){
 		console.log($scope.search)

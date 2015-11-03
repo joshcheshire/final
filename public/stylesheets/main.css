@@ -11,6 +11,11 @@
   background-color: black;
   margin: 0 auto;
 }
+
+.navBarUser{
+  text-align: right;
+  padding: 0;
+}
 .buttons{
   text-align: center;
 }
@@ -141,17 +146,17 @@ font-weight: bolder;
   font-weight: bolder;
 }
 
-.date{
+/*.date{
 
   font-size: 20px;
   
   font-weight: bolder;
 }
-
+*/
 
 
 .dataContainer{
-  margin-left: 5vw;
+  margin-left: 3vw;
   position:relative;
   -webkit-animation: fadein 2s;
 
@@ -174,12 +179,12 @@ font-weight: bolder;
     to   { opacity: 1; }
 }
 
-.supAudio{
+/*.supAudio{
   background-color: silver;
   border-radius: 8px;
   -webkit-animation: fadein 2s;
 
-}
+}*/
 
 @-webkit-keyframes fadein {
     from { opacity: 0; }
@@ -194,13 +199,13 @@ font-weight: bolder;
 }
 
 
-/*@media only screen and (max-width: 720px){
+@media only screen and (max-width: 720px){
   *body{
     display:block;
   }
 }
 
-*/
+
 
 .addArtist{
   text-align: center;
