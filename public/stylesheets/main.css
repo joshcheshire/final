@@ -1,20 +1,29 @@
-
+/*
 #background{
 
   position:absolute;
   background-size: cover;
   width:100vw;
   
+}*/
+
+.userLogin{
+  border:3px solid black;
 }
 
 .navbar{
   background-color: black;
   margin: 0 auto;
-}
+  opacity:0.5;
+/*  height:3vw;
+*/}
 
 .navBarUser{
   text-align: right;
-  padding: 0;
+  color:white;
+/*  padding-top: -5vw;
+*/
+  
 }
 .buttons{
   text-align: center;
@@ -46,6 +55,13 @@ background-image: url('http://buztour.com/wp-content/uploads/2013/12/concert-wal
 background-size: cover;
 
 }
+.about{
+font-family: 'Jura', sans-serif;
+background-image: url("https://lifeloveandyoga.files.wordpress.com/2012/10/people_entertainment_and_recreation_on_concert_024307_.jpg");
+background-size: cover;
+
+
+}
 
 
 .uploadAudio{
@@ -70,6 +86,15 @@ text-align: center;
   
 }
 
+.header{
+  font-family: 'Jura', sans-serif;
+text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  position: relative;
+  top:-21px;
+}
+
 #tourRedirect{
  
   text-align: center;
@@ -78,6 +103,10 @@ text-align: center;
 }
 .tourHeader{
   text-align: center;
+}
+.btn-showInfo{
+  background-color: black;
+  border-radius: 5px;
 }
 
 #noFuss{
@@ -153,11 +182,14 @@ font-weight: bolder;
   font-weight: bolder;
 }
 */
-
+.infoHead{
+  color:black;
+}
 
 .dataContainer{
-  margin-left: 3vw;
+  margin-left: 2.5vw;
   position:relative;
+  padding-top: 8vw;
   -webkit-animation: fadein 2s;
 
 }

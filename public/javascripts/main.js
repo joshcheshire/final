@@ -37,10 +37,10 @@ angular.module('master')
 
 angular.module('master')
 	.controller('authController', ['$scope', '$http', '$rootScope','authService', function($scope, $http, $rootScope, authService){
-		console.log('AUTH', authService)
+		// console.log('AUTH', authService)
 		
 		authService.authCheck(function(user){
-			console.log('USER!', user)
+			// console.log('USER!', user)
 			$scope.user = user
 			$rootScope.user = $scope.user
 		})

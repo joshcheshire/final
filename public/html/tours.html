@@ -2,7 +2,8 @@
 	<html ng-app="master">
 	
 	<head>
-		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"><title>Show Submit</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+		<title>Show Submit</title>
 		<link href='https://fonts.googleapis.com/css?family=Jura:400,500' rel='stylesheet' type='text/css'>
 		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.css">
 		<script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
@@ -13,6 +14,15 @@
 		</head>
 
 		<body class ="tours" ng-controller = "showController">
+				
+			<nav class = "navbar navbar-top ">
+ 				<a href="/index" type = "link" class = "btn btn-lg ">GetPromoted</a>
+ 				<a href="/showInfo" type = "link" class = "btn btn-md ">Create Show</a>
+				<a href="/tours" type = "link" class= "btn btn-md">Tours</a>
+				<a href="/about" type = "link" class = "btn btn-md"> About</a>
+				<a href="/" type = "link" class = "btn btn-md"> Log Out</a>
+			</nav>
+
 			
 			<div>
 			
@@ -21,21 +31,20 @@
 					<p class = "citySelect"> Select A City</p>
 						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
 							
-							<option value = "{{data.city}}" ng-repeat="data in shows | unique: 'city'">{{data.city}}, {{data.state}}</option>
+							<option value = "{{data.city}}" ng-repeat="data in shows | unique:'city'">{{data.city}}, {{data.state}}</option>
 						</select>
 					</div>
 				</div>
-					<!-- <div class=  "dataContainer"  ng-repeat="data in bandList "> -->
 
 
 
 			<div>
 				<ul ng-show= 'search.city'>	
 		
-			<div class = "dataContainer" ng-repeat="data in shows | filter:search.city">
+			<div class = "dataContainer" ng-repeat="data in shows | filter:search.city" >
  			
 
-					<h1 ng-click="playAudio(data)">{{data.artist}}</h1>
+					<h1 ng-click="playAudio(data)"><em><strong>{{data.artist}}</strong></em></h1>
 					<audio class = "audio" controls ng-show = "data.showAudio" >
   					<source src="{{$sce.trustAsResourceUrl(data.song)}}" type="audio/mpeg">
 					</audio>

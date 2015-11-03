@@ -13,28 +13,36 @@
 		</head>
 
 		<body class='showInfo' ng-controller = "showController">
+		
+		<nav class = "navbar navbar-top ">
+ 			<a href="/index" type = "link" class = "btn btn-lg ">GetPromoted</a>
+ 			<a href="/showInfo" type = "link" class = "btn btn-md ">Create Show</a>
+			<a href="/tours" type = "link" class= "btn btn-md">Tours</a>
+			<a href="/about" type = "link" class = "btn btn-md"> About</a>
+			<a href="/" type = "link" class = "btn btn-md"> Log Out</a>
+		</nav>
 
 			<div class = "addArtist">
 
-			<h1>{{header}}</h1> <br> 
+			<h1 class = "infoHead">{{header}}</h1> <br> 
 				<form ng-submit="createShow()">
 					
 					<div class ="uploadAudio">
 						<p class = "text-danger"> Upload Audio Clip</p>
 						<input class ="choose" fileread="newShow.song" type="file" accept="audio/*">
 					</div>
-					<input ng-model="newShow.artist"  placeholder="Artist">
-					<input ng-model="newShow.venue" placeholder="Venue"> 
-					<input ng-model="newShow.city"  placeholder="City">
-					<input ng-model="newShow.state"  placeholder="State">
-					<input type="submit">
+					<input class = 'userLogin' ng-model="newShow.artist"  placeholder="Artist">
+					<input class = 'userLogin' ng-model="newShow.venue" placeholder="Venue"> 
+					<input class = 'userLogin' ng-model="newShow.city"  placeholder="City">
+					<input class = 'userLogin' ng-model="newShow.state"  placeholder="State">
+					<input class = 'userLogin' type="submit">
 				</form>
 
 		</div>
 		
 		<div id = "tourRedirect">
 
-		<a  href="/tours" class="btn btn-success btn-lg">View Shows</a>
+		<a  href="/tours" class="btn-showInfo btn-lg">View Shows</a>
 
 		</div>
 		
