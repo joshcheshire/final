@@ -1,4 +1,4 @@
-var master = angular.module('master', [])
+var master = angular.module('master', ['angular.filter'])
 
 
 angular.module('master').directive("fileread", [function () {
@@ -139,7 +139,7 @@ angular.module('master').controller('mainController', ['$scope', mainControllerF
 
 
 
-angular.module('master').controller('submitController',['$scope', '$http','$sce', submitControllerFunc])
+angular.module('master').controller('submitController',['$scope', '$http','$sce',  submitControllerFunc])
 
 
 
@@ -148,11 +148,11 @@ angular.module('master').controller('submitController',['$scope', '$http','$sce'
 var showControllerFunc =function($scope, $http, $sce){
 	$scope.$sce = $sce;
 
-		$scope.shows =[]
+	$scope.shows =[]
 	// 	newArray = []
 	// $scope.shows.forEach(function(element){
-	// 	if (newArray.indexOf(element) === -1){
-	// 		newArray.push(element)
+	// 	if ($scope.shows.indexOf(element) === -1){
+	// 		$scope.shows.push(element)
 	// 	}
 	// });
 	// console.log(newArray)
