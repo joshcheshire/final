@@ -30,7 +30,7 @@
 }
 
 .login{
-  background-image: url("http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52580ca759efe_1.JPG");
+  background-image: url("/pics/loginPic.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -38,26 +38,26 @@
 }
 
 .tours{
-  background-image: url("https://images.unsplash.com/uploads/1413259835094dcdeb9d3/6e609595?ixlib=rb-0.3.5&q=80&fm=jpg&s=3dcbec753a793b4ff35633bc776ddffe");
+  background-image: url("/pics/citynight.JPEG");
   background-size: cover;
   font-family: 'Jura', sans-serif;
 }
 
 .index{
-  background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_5252bb51404f8_1.JPG');
+  background-image: url("/pics/unsplash_1.JPg");
   background-size: cover;
   font-family: 'Jura', sans-serif;
 }
 
 .showInfo{
 font-family: 'Jura', sans-serif;
-background-image: url('http://buztour.com/wp-content/uploads/2013/12/concert-wallpaper-1920x1200.jpg');
+background-image: url('/pics/createShow.JPG');
 background-size: cover;
 
 }
 .about{
 font-family: 'Jura', sans-serif;
-background-image: url("https://lifeloveandyoga.files.wordpress.com/2012/10/people_entertainment_and_recreation_on_concert_024307_.jpg");
+background-image: url("/pics/about.JPG");
 background-size: cover;
 
 
